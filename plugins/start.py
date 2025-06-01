@@ -166,7 +166,7 @@ async def start_command(client: Client, message: Message):
 
     ]
             ]
-        )
+          )
         await message.reply_photo(
             photo=START_PIC,
             caption=START_MSG.format(
@@ -177,7 +177,7 @@ async def start_command(client: Client, message: Message):
                 id=message.from_user.id
             ),
             reply_markup=reply_markup,
-            message_effect_id=5044134455711629726)  #❤️
+            message_effect_id=5104841245755180586)  # 🔥
         
         return
 
