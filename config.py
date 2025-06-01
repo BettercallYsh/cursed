@@ -29,11 +29,11 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "6482036984")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8089")
 #--------------------------------------------
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://harshsharma:harsh@harshsharma.2jstkwo.mongodb.net/")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srvwo.mongodb.net/")
 DB_NAME = os.environ.get("DATABASE_NAME", "file_senderrbot")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "1800"))  # 0 means no expiry
-BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/iambothub")
+BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/iblamedante")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
 START_PIC = os.environ.get("START_PIC", "https://imgur.com/gallery/gojoo-nF8rw4v")
@@ -66,7 +66,7 @@ CMD_TXT = """<blockquote><b>» ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:</b></blockqu
 <b>›› /admins :</b> ɢᴇᴛ ʟɪsᴛ ᴏꜰ ᴀᴅᴍɪɴs
 """
 #--------------------------------------------
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @iambothub</b>") #set your Custom Caption here, Keep None for Disable Custom Caption
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @iblamedante</b>") #set your Custom Caption here, Keep None for Disable Custom Caption
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False #set True if you want to prevent users from forwarding files from bot
 #--------------------------------------------
 #Set true if you want Disable your Channel Posts Share button
