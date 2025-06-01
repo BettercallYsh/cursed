@@ -18,31 +18,31 @@ from logging.handlers import RotatingFileHandler
 #rohit_1888 on Tg
 #--------------------------------------------
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5823655670:---")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7760574589:AAEhId8EEx4sG3BORwtZWrwmFnJQ5Pu4ZrU")
 APP_ID = int(os.environ.get("APP_ID", "20841767")) #Your API ID from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "9a0aec111e02a302f74ad535bd98440a") #Your API Hash from my.telegram.org
 #--------------------------------------------
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001854472570")) #Your db channel Id
-OWNER = os.environ.get("OWNER", "drlundsingh") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "6482036984")) # Owner id
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002643117881")) #Your db channel Id
+OWNER = os.environ.get("OWNER", "apatheticyash") # Owner username without @
+OWNER_ID = int(os.environ.get("OWNER_ID", "1439206175")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8089")
 #--------------------------------------------
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srvwo.mongodb.net/")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Yashsharma:3oH3vnyH6dIxtO7W@yashcluster.az6xy1k.mongodb.net/")
 DB_NAME = os.environ.get("DATABASE_NAME", "file_senderrbot")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "1800"))  # 0 means no expiry
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/iblamedante")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
-START_PIC = os.environ.get("START_PIC", "https://imgur.com/gallery/gojoo-nF8rw4v")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://imgur.com/gallery/gojoo-nF8rw4v")
+START_PIC = os.environ.get("START_PIC", "https://imgur.com/gallery/bruh-SUQMGQ9")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://imgur.com/gallery/bruh-SUQMGQ9")
 #--------------------------------------------
 
 #--------------------------------------------
 HELP_TXT = "ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ"
-ABOUT_TXT = "owner"
+ABOUT_TXT = "𝙤𝙬𝙣𝙚𝙧 @𝙞𝙗𝙡𝙖𝙢𝙚𝙙𝙖𝙣𝙩𝙚"
 #--------------------------------------------
 #--------------------------------------------
 START_MSG = os.environ.get("START_MESSAGE", "<b>ʜᴇʟʟᴏ {first}\n\n<blockquote> ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</blockquote></b>")
