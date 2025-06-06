@@ -18,19 +18,19 @@ from logging.handlers import RotatingFileHandler
 #rohit_1888 on Tg
 #--------------------------------------------
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7760ZWrwmFnJQ5Pu4ZrU")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7235782510:AAFVu5K1kIBflbcvDqtSoVbuFp6BdRLfWUo")
 APP_ID = int(os.environ.get("APP_ID", "20841767")) #Your API ID from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "9a0aec111e02a302f74ad535bd98440a") #Your API Hash from my.telegram.org
 #--------------------------------------------
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002643117881")) #Your db channel Id
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002109329180 ")) #Your db channel Id
 OWNER = os.environ.get("OWNER", "h") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "1435")) # Owner id
+OWNER_ID = int(os.environ.get("OWNER_ID", "1439206175")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8089")
 #--------------------------------------------
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Yashsharma:3oH3vnyH6dIxtO7W@yashcluster.az6xy1k.mongodb.net/")
-DB_NAME = os.environ.get("DATABASE_NAME", "file_senderrbot")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://harshsharma:harshsharma@madhav.okjk2kp.mongodb.net/marleg?retryWrites=true&w=majority")
+DB_NAME = os.environ.get("DATABASE_NAME", "marlegbot")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "1800"))  # 0 means no expiry
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/iblamedante")
