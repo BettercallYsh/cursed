@@ -18,18 +18,18 @@ from logging.handlers import RotatingFileHandler
 #rohit_1888 on Tg
 #--------------------------------------------
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6464484364:AAE1fOG0S5ReQADzt5KzUK8rqW4PvAUfrkY")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", ":")
 APP_ID = int(os.environ.get("APP_ID", "24938067")) #Your API ID from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "d9f7ae36c6f7709f3aaa238ebcc80acb") #Your API Hash from my.telegram.org
 #--------------------------------------------
 
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001848840291")) #Your db channel Id
-OWNER = os.environ.get("OWNER", "apatheticyash") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "1439206175")) # Owner id
+OWNER = os.environ.get("OWNER", "") # Owner username without @
+OWNER_ID = int(os.environ.get("OWNER_ID", "")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8345")
 #--------------------------------------------
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://harshsharma:harsh@harshsharma.2jstkwo.mongodb.net/")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb.net/")
 DB_NAME = os.environ.get("DATABASE_NAME", "niggerndra_bot")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
