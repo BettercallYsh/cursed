@@ -18,26 +18,26 @@ from logging.handlers import RotatingFileHandler
 #rohit_1888 on Tg
 #--------------------------------------------
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", ":")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6996664755:AAFql-TCxUALgUQbsdoDi8nu1iyzcWMzUyU")
 APP_ID = int(os.environ.get("APP_ID", "24938067")) #Your API ID from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "d9f7ae36c6f7709f3aaa238ebcc80acb") #Your API Hash from my.telegram.org
 #--------------------------------------------
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001848840291")) #Your db channel Id
-OWNER = os.environ.get("OWNER", "") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "")) # Owner id
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002133263220")) #Your db channel Id
+OWNER = os.environ.get("OWNER", "7133847655") # Owner username without @
+OWNER_ID = int(os.environ.get("OWNER_ID", "baaphikehde")) # Owner id
 #--------------------------------------------
-PORT = os.environ.get("PORT", "8345")
+PORT = os.environ.get("PORT", "8084")
 #--------------------------------------------
-DB_URI = os.environ.get("DATABASE_URL", "mongodb.net/")
-DB_NAME = os.environ.get("DATABASE_NAME", "niggerndra_bot")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Yashsharma:BkVJgude801H98LC@yashsharma.4ao0fyh.mongodb.net/")
+DB_NAME = os.environ.get("DATABASE_NAME", "instaidsbot")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/iblamedante")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
-START_PIC = os.environ.get("START_PIC", "https://imgur.com/gallery/bruh-SUQMGQ9")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://imgur.com/gallery/bruh-SUQMGQ9")
+START_PIC = os.environ.get("START_PIC", "https://imgur.com/gallery/makima-70mxjq3#UNw49OD")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://imgur.com/gallery/makima-70mxjq3#UNw49OD")
 #--------------------------------------------
 
 #--------------------------------------------
