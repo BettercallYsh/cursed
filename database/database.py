@@ -144,6 +144,32 @@ class Rohit:
             {'$set': {'mode': mode}},
             upsert=True
         )
+  # GET or CREATE invite link for a force-sub channel
+   async def get_or_create_invite_link(self, bot: Bot, channel_id: int) -> str:
+    try:
+        record = await self.fsub_data.find_one({'_id': channel_id})
+        if record and record.get("invite_link"):
+            return record["invite_link"]
+
+        # Create new invite link
+        invite = await bot.create_chat_invite_link(
+            chat_id=channel_id,
+            creates_join_request=True  # or False if you prefer
+        )
+        link = invite.invite_link
+
+        # Save to DB
+        await self.fsub_data.update_one(
+            {'_id': channel_id},
+            {'$set': {'invite_link': link}},
+            upsert=True
+        )
+        return link
+
+    except Exception as e:
+        logging.error(f"[Invite Link Error] {e}")
+        return None
+
 
     # REQUEST FORCE-SUB MANAGEMENT
 
