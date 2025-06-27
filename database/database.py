@@ -128,15 +128,11 @@ class Rohit:
             record = await self.fsub_data.find_one({'_id': channel_id})
             link = record.get("invite_link") if record else None
 
-            # Check if the link is still valid
+            # Only create a new link if there is no link stored
             if link:
-                try:
-                    await bot.get_chat(link)
-                    return link
-                except (InviteHashExpired, InviteHashInvalid):
-                    await self.reset_invite_link(channel_id)
+                return link
 
-            # Create a new invite link
+            # Create a new invite link (join request)
             invite = await bot.create_chat_invite_link(
                 chat_id=channel_id,
                 creates_join_request=True
