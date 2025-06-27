@@ -8,6 +8,7 @@ import sys
 from datetime import datetime
 #rohit_1888 on Tg
 from config import *
+from pyrogram.errors import InviteHashExpired, InviteHashInvalid
 
 
 name ="""
@@ -77,6 +78,33 @@ class Bot(Client):
             self.LOGGER(__name__).info("Shutting down...")
         finally:
             loop.run_until_complete(self.stop())
+
+    async def get_or_create_invite_link(self, bot, channel_id: int) -> str:
+        try:
+            record = await self.fsub_data.find_one({'_id': channel_id})
+            link = record.get("invite_link") if record else None
+
+            # Only create a new link if there is no link stored
+            if link:
+                return link
+
+            # Create a new invite link (join request)
+            invite = await bot.create_chat_invite_link(
+                chat_id=channel_id,
+                creates_join_request=True
+            )
+            link = invite.invite_link
+
+            await self.fsub_data.update_one(
+                {'_id': channel_id},
+                {'$set': {'invite_link': link}},
+                upsert=True
+            )
+            return link
+
+        except Exception as e:
+            logging.error(f"[Invite Link Error] {e}")
+            return None
 
 #
 # Copyright (C) 2025 by Codeflix-Bots@Github, < https://github.com/Codeflix-Bots >.
