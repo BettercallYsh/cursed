@@ -9,6 +9,7 @@ from config import DB_URI, DB_NAME
 from bot import Bot
 import logging
 from datetime import datetime, timedelta
+from pyrogram.errors import InviteHashExpired, InviteHashInvalid
 
 logging.basicConfig(level=logging.INFO)
 
@@ -122,12 +123,16 @@ class Rohit:
         )
 
     # GET or CREATE invite link for a force-sub channel
-    async def get_or_create_invite_link(self, bot: Bot, channel_id: int) -> str:
+    async def get_or_create_invite_link(self, bot, channel_id: int) -> str:
         try:
             record = await self.fsub_data.find_one({'_id': channel_id})
-            if record and record.get("invite_link"):
-                return record["invite_link"]
+            link = record.get("invite_link") if record else None
 
+            # Only create a new link if there is no link stored
+            if link:
+                return link
+
+            # Create a new invite link (join request)
             invite = await bot.create_chat_invite_link(
                 chat_id=channel_id,
                 creates_join_request=True
