@@ -207,12 +207,15 @@ async def not_joined(client: Client, message: Message):
                     name = data.title
 
                     if mode == "on" and not data.username:
+                        # Force sub ON, private channel: join request link
                         link = await db.get_or_create_invite_link(client, chat_id)
                     else:
                         if data.username:
+                            # Public channel: username link
                             link = f"https://t.me/{data.username}"
                         else:
-                            link = await db.get_or_create_invite_link(client, chat_id)
+                            # Force sub OFF, private channel: normal invite link
+                            link = await client.export_chat_invite_link(chat_id)
 
                     buttons.append([InlineKeyboardButton(text=name, url=link)])
                     count += 1
