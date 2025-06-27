@@ -79,39 +79,6 @@ class Bot(Client):
         finally:
             loop.run_until_complete(self.stop())
 
-    async def get_or_create_invite_link(self, bot: Bot, channel_id: int) -> str:
-        try:
-            record = await self.fsub_data.find_one({'_id': channel_id})
-            link = record.get("invite_link") if record else None
-
-            # Check if the link is still valid
-            if link:
-                try:
-                    # Try to get chat info using the invite link
-                    await bot.get_chat(link)
-                    return link
-                except (InviteHashExpired, InviteHashInvalid):
-                    # Link is invalid/expired, so reset it
-                    await self.reset_invite_link(channel_id)
-
-            # Create a new invite link
-            invite = await bot.create_chat_invite_link(
-                chat_id=channel_id,
-                creates_join_request=True
-            )
-            link = invite.invite_link
-
-            await self.fsub_data.update_one(
-                {'_id': channel_id},
-                {'$set': {'invite_link': link}},
-                upsert=True
-            )
-            return link
-
-        except Exception as e:
-            logging.error(f"[Invite Link Error] {e}")
-            return None
-
 #
 # Copyright (C) 2025 by Codeflix-Bots@Github, < https://github.com/Codeflix-Bots >.
 #
